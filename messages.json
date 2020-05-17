@@ -1,0 +1,79 @@
+{
+  "MgsFeat": {
+    "question" : "",
+    "ref" : ""
+  },
+  "MgsFix": {
+    "question" : "",
+    "ref" : ""
+  },
+  "MgsDocs": {
+    "question" : "",
+    "ref" : ""
+  },
+  "MgsStyle": {
+    "question" : "",
+    "ref" : ""
+  },
+  "MgsRefactor": {
+    "question" : "",
+    "ref" : ""
+  },
+  "MgsPerf": {
+    "question" : "",
+    "ref" : ""
+  },
+  "MgsTest": {
+    "question" : "",
+    "ref" : ""
+  },
+  "general" : [
+    {
+      "key": 1,
+      "type" : "input",
+      "question" : "What is the scope of this change (e.g. component or file name): (press enter to skip)",
+      "ref" : ""
+    }, {
+      "key": 2,
+      "type" : "input",
+      "maxLengh" : 100,
+      "validate": true,
+      "transformer": true,
+      "filter": true,
+      "question" : "Write a short, imperative tense description of the change (max [maxLengh] chars):\n",
+      "ref" : ""    
+    }, {
+      "key": 3,
+      "type" : "input",
+      "name" : "body",
+      "question" : "Provide a longer description of the change: (press enter to skip)\n"
+    }, {
+      "key": 4,
+      "type" : "confirm",
+      "question" : "Are there any breaking changes?",
+      "yes" : {
+         "key": 5,
+         "type" : "input",
+         "question" : "Describe the breaking changes:\n",
+         "ref" : "BREAKING CHANGE: "
+      }
+    }, {
+      "key": 6,
+      "type" : "confirm",
+      "question" : "Does this change affect any open issues?",
+      "yes" : [
+        {
+         "key": 7,
+         "type" : "input",
+         "question" : "If issues are closed, the commit requires a body. Please enter a longer description of the commit itself:\n",
+         "ref" : "Issues: "
+        }, {
+         "key": 8, 
+         "type" : "input",
+         "question" : "Add issue references (e.g. 'fix #123', 're #123'.):\n",
+         "ref" : "Issues Ref: "
+        }         
+      ]
+    }
+  ]
+}
